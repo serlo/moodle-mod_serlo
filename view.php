@@ -64,7 +64,10 @@ if (isset($_SERVER['HTTP_USER_AGENT']) && strlen(strstr($_SERVER['HTTP_USER_AGEN
     \core\notification::warning(get_string('firefox_warning', 'mod_serlo'));
 }
 
-$editorattrs = [];
+$editorattrs = [
+    'use-shadow-dom' => "false"
+];
+
 if ($PAGE->user_is_editing()) {
     $editorattrs['mode'] = "write";
     $editorattrs['testing-secret'] = get_config('serlo', 'editor_secret');
