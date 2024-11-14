@@ -9,8 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@serlo/editor": "^0.19.0",
-    "@serlo/editor-web-component": "^0.10.0"
+    "@serlo/editor": "*",
+    "@serlo/editor-web-component": "*"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^26.0.1",
