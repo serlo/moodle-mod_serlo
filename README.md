@@ -37,7 +37,7 @@ Contributions are welcome and will be fully credited. We accept contributions vi
 
 This plugin uses the @serlo/editor-web-component npm package which need to be bundled to be used correctly by moodle.
 
-The package.json includes a `build` script which bundles the package and runs the moodle grunt task to generate the file used by moodle.
+The package.json includes a `libs/serlo-editor` script which bundles the package and runs the moodle grunt task to generate the file used by moodle.
 
 Since the complete task takes some time you might want to use the `npx grunt watch` task in the moodle root directory.
 
