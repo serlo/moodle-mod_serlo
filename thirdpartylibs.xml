@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<libraries>
+  <library>
+    <location>libs/serlo-editor</location>
+    <name>serlo-editor</name>
+    <version>1.0.0</version>
+    <license>Apache 2.0</license>
+  </library>
+</libraries>
