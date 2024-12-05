@@ -2,7 +2,7 @@
 This plugin adds a serlo mod to moodle
 
 ## Author
-* Author: Faisal Kaleem, [adornis.de](https://adornis.de/)
+* Author: [adornis.de](https://adornis.de/)
 * Min. required: Moodle 4.4
 * Supports PHP: 8.1
 
@@ -56,3 +56,7 @@ Also you need the `watchman` binary to be present in your path: See [here](https
 then you can start `npx grunt watch` in the moodle root dir.
 
 Afterwards start the `watch` script out of the serlo plugin dir to start esbuild in watch mode.
+
+## File Storage Configuration
+
+On testing environments, use this secret in the moodle options: `VJN8pHhqVj8RtO+TfY2/Ka1JN4JdH/oSOAdPHz5a`. It will allow access to the default Serlo asset server.
