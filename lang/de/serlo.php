@@ -57,6 +57,7 @@ $string['modulenameplural'] = 'Serlos';
 
 $string['pluginadministration'] = 'Serlo Administration';
 $string['pluginname'] = 'Serlo';
+$string['privacy:metadata'] = 'The serlo activity module does not store any personal data.';
 
 $string['scMcExercise'] = 'Aufgabe Auswahlaufgabe';
 $string['serloTable'] = 'Tabelle';

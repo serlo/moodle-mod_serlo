@@ -65,7 +65,7 @@ if (isset($_SERVER['HTTP_USER_AGENT']) && strlen(strstr($_SERVER['HTTP_USER_AGEN
 }
 
 $editorattrs = [
-    'use-shadow-dom' => "false"
+    'use-shadow-dom' => "false",
 ];
 
 if ($PAGE->user_is_editing()) {
