@@ -66,6 +66,7 @@ if (isset($_SERVER['HTTP_USER_AGENT']) && strlen(strstr($_SERVER['HTTP_USER_AGEN
 
 $editorattrs = [
     'use-shadow-dom' => "false",
+    'language' => current_language(),
 ];
 
 if ($PAGE->user_is_editing()) {
