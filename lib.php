@@ -92,15 +92,6 @@ function serlo_delete_instance($id) {
 }
 
 /**
- * Serlo cron function that is called from cron_task.php
- * @return void
- */
-function serlo_cron() {
-    global $CFG, $DB;
-    mtrace("This is serlo activity module and doesn't have any logic implemented");
-}
-
-/**
  * Return the preconfigured tools which are configured for inclusion in the activity picker.
  *
  * @param \core_course\local\entity\content_item $defaultmodulecontentitem reference to the content item for the LTI module.
