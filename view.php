@@ -23,6 +23,8 @@
  * @copyright 2024 Serlo (https://adornis.de)
  */
 
+use mod_serlo\output\serlo_editor;
+
 require(__DIR__ . '/../../config.php');
 
 $id = optional_param('id', 0, PARAM_INT);
@@ -76,11 +78,6 @@ if ($PAGE->user_is_editing()) {
     $editorattrs['mode'] = "read";
 }
 
-$strattrs = "";
-array_walk($editorattrs, function ($value, $key) use (&$strattrs) {
-    $strattrs .= $key . '="' . $value . '" ';
-});
-
 // Print the page header.
 echo $OUTPUT->header();
 
@@ -90,16 +87,11 @@ if ($serlo->intro) {
 
 echo $OUTPUT->box_start('generalbox', 'notallowenter');
 
-if (has_capability('moodle/category:manage', $context) && $PAGE->user_is_editing()) {
-    echo '<div class="serlo save-wrapper">';
-    echo '<a href="#" id="mod_serlo_save" class="btn btn-primary disabled">' . get_string("save") . '</a>';
-    echo '</div>';
-}
-
-echo '<div id="serlo-root">
-    <div class="serlo loader-wrapper"></div>
-    <serlo-editor class="hidden" ' . $strattrs . '></serlo-editor>
-  </div>';
+$output = $PAGE->get_renderer('mod_serlo');
+echo $output->render(new serlo_editor(
+    has_capability('moodle/category:manage', $context) && $PAGE->user_is_editing(),
+    $editorattrs,
+));
 
 $PAGE->requires->js_call_amd('mod_serlo/serlo-lazy', 'init', [$serlo->id]);
 
