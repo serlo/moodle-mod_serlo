@@ -46,6 +46,8 @@ if (!$serlo = $DB->get_record('serlo', ['id' => $cm->instance])) {
 require_course_login($course, true, $cm);
 
 $context = context_module::instance($cm->id);
+require_capability('mod/serlo:view', $context);
+
 $PAGE->set_context($context);
 
 $title = $serlo->name;
