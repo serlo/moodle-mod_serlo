@@ -1,0 +1,40 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+    @template mod_serlo/editor
+    
+    Display the editor with condition and attributes
+
+    Context variables required for this template:
+    * cansave: Check has_capability and is editing mode
+    * editorattrs: Editor attributes
+
+    Example context (json):
+    {
+        "cansave": true
+        "editorattrs": "mode=write lang=en"
+    }
+}}
+{{#cansave}}
+<div class="serlo save-wrapper">
+    <a href="#" id="mod_serlo_save" class="btn btn-primary disabled">{{#str}} save, core {{/str}}</a>
+</div>
+{{/cansave}}
+<div id="serlo-root">
+    <div class="serlo loader-wrapper"></div>
+    <serlo-editor class="hidden" {{{ editorattrs }}}></serlo-editor>
+</div>
