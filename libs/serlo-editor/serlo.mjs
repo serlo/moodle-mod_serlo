@@ -1,5 +1,6 @@
 import {
-  EditorWebComponent
+  EditorWebComponent,
+  defaultPlugins
 } from "@serlo/editor-web-component";
 import {
   call
@@ -72,6 +73,7 @@ export const init = async (serloid) => {
   if (initialState) {
     editor.initialState = JSON.parse(initialState);
   }
+  editor.plugins = defaultPlugins;
   editor.classList.remove("hidden");
   loader.resolve();
 };
