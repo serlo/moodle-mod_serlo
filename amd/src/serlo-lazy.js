@@ -66763,6 +66763,7 @@ const init = async (serloid) => {
   if (initialState) {
     editor.initialState = JSON.parse(initialState);
   }
+  editor.plugins = Mx$1;
   editor.classList.remove("hidden");
   loader.resolve();
 };
