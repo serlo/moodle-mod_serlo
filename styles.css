@@ -1,12 +1,16 @@
-/* This file is automatically added by Moodle */
+/* stylelint-disable declaration-no-important */
 
 .serlo.save-wrapper {
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: 42px;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 42px;
 }
 
 .serlo.loader-wrapper {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
+}
+
+.fixed-top {
+    z-index: 100 !important;
 }
