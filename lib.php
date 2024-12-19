@@ -25,6 +25,8 @@
 
 defined('MOODLE_INTERNAL') || die();
 
+use mod_serlo\event\course_module_viewed;
+
 require_once($CFG->dirroot . '/mod/serlo/locallib.php');
 
 /**
@@ -89,6 +91,35 @@ function serlo_delete_instance($id) {
     }
 
     return $result;
+}
+
+/**
+ * Mark the activity completed (if required) and trigger the course_module_viewed event.
+ *
+ * @param stdClass $instance instance object
+ * @param stdClass $course   course object
+ * @param stdClass $cm       course module object
+ * @param stdClass $context  context object
+ * @since Moodle 3.0
+ */
+function serlo_view($instance, $course, $cm, $context) {
+    global $CFG;
+
+    // Trigger course_module_viewed event.
+    $params = [
+        'context' => $context,
+        'objectid' => $instance->id,
+    ];
+
+    $event = course_module_viewed::create($params);
+    $event->add_record_snapshot('course_modules', $cm);
+    $event->add_record_snapshot('course', $course);
+    $event->add_record_snapshot('serlo', $instance);
+    $event->trigger();
+
+    // Completion.
+    $completion = new completion_info($course);
+    $completion->set_module_viewed($cm);
 }
 
 /**
@@ -252,4 +283,23 @@ function serlo_get_content_types() {
             "state":[{"type":"p","children":[{"text":""}]}]},"mode":"typing"}}}}]}',
         ],
     ];
+}
+
+/**
+ * Return if the plugin supports $feature.
+ *
+ * @param string $feature Constant representing the feature.
+ * @return true | null True if the feature is supported, null otherwise.
+ */
+function serlo_supports($feature) {
+    switch ($feature) {
+        case FEATURE_MOD_INTRO:
+            return true;
+        case FEATURE_BACKUP_MOODLE2:
+            return true;
+        case FEATURE_COMPLETION_HAS_RULES:
+            return true;
+        default:
+            return null;
+    }
 }

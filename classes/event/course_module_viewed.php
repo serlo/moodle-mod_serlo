@@ -52,4 +52,13 @@ class course_module_viewed extends \core\event\course_module_viewed {
         $event->add_record_snapshot('serlo', $record);
         return $event;
     }
+
+    /**
+     * Map the objectid to it's new value in the new course.
+     *
+     * @return array
+     */
+    public static function get_objectid_mapping() {
+        return ['db' => 'serlo', 'restore' => 'serlo'];
+    }
 }
