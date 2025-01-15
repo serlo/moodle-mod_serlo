@@ -9,7 +9,7 @@
   "author": "Faisal Kaleem",
   "license": "Apache-2.0",
   "dependencies": {
-    "@serlo/editor-web-component": "0.13.0"
+    "@serlo/editor-web-component": "0.13.1"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^26.0.1",
