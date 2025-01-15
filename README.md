@@ -60,3 +60,14 @@ Afterwards start the `watch` script out of the serlo plugin dir to start esbuild
 ## File Storage Configuration
 
 On testing environments, use this secret in the moodle options: `VJN8pHhqVj8RtO+TfY2/Ka1JN4JdH/oSOAdPHz5a`. It will allow access to the default Serlo asset server.
+
+## Release Process
+
+1. set up development env (see #Development) and run `npx grunt watch`
+2. run `./build.sh` in `moodle/mod/serlo/libs/serlo-editor`
+3. commit and push
+4. download zip from entire repo and submit to moodle plugin store
+
+For context:
+`mod/serlo/amd/src/serlo-lazy.js` is updated by `build.sh`
+`mod/serlo/amd/src/serlo-lazy.min.js` is updated by `npx grunt watch`
