@@ -28,5 +28,5 @@ defined('MOODLE_INTERNAL') || die();
 $plugin->version = 2025011600; // The current module version (Date: YYYYMMDDXX).
 $plugin->requires = 2022041900; // Requires this Moodle version.
 $plugin->component = 'mod_serlo'; // Full name of the plugin (used for diagnostics).
-$plugin->release   = '1.1.1';
+$plugin->release   = '1.1.2';
 $plugin->maturity  = MATURITY_STABLE;
