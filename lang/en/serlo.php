@@ -65,7 +65,7 @@ $string['settings_editor_secret_description'] = 'Editor secret!';
 $string['settings_editor_secret_label'] = 'Editor secret';
 $string['settings_placeholder'] = 'Serlo Settings Placeholder';
 
-$string['spoiler'] = 'Spolier';
+$string['spoiler'] = 'Spoiler';
 
 $string['text'] = 'Text';
 
