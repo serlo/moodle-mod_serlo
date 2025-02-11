@@ -75,7 +75,9 @@ $editorattrs = [
     'language' => current_language(),
 ];
 
-if ($PAGE->user_is_editing()) {
+$cansave = has_capability('mod/serlo:update', $context) && $PAGE->user_is_editing();
+
+if ($cansave) {
     $editorattrs['mode'] = "write";
     $editorattrs['testing-secret'] = get_config('serlo', 'editor_secret');
 } else {
@@ -93,7 +95,7 @@ echo $OUTPUT->box_start('generalbox', 'notallowenter');
 
 $output = $PAGE->get_renderer('mod_serlo');
 echo $output->render(new serlo_editor(
-    has_capability('moodle/category:manage', $context) && $PAGE->user_is_editing(),
+    $cansave,
     $editorattrs,
 ));
 
