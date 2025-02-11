@@ -74,7 +74,7 @@ class update_serlo_state extends external_api {
 
         $context = context_module::instance($cm->id);
         self::validate_context($context);
-        require_capability('moodle/category:manage', $context);
+        require_capability('mod/serlo:update', $context);
 
         if (!$serlo = $DB->get_record('serlo', ['id' => $cm->instance])) {
             throw new \moodle_exception('invalidid');
