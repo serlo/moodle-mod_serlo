@@ -74,6 +74,7 @@ $editorattrs = [
     'use-shadow-dom' => "false",
     'language' => current_language(),
     'is-production-environment' => true, // TODO: Should be true in Moodle Plugin Directory, false otherwise. 
+    'editor-variant' => "moodle",
 ];
 
 $cansave = has_capability('mod/serlo:update', $context) && $PAGE->user_is_editing();
