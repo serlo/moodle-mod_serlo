@@ -31,10 +31,10 @@ use templatable;
  */
 class serlo_editor implements renderable, templatable {
     /**
-     * Summary of htmltitle
+     * Determines that users can update the content
      * @var bool
      */
-    private $cansave = "";
+    private $cansave = false;
 
     /**
      * Summary of editorattrs
