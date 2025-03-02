@@ -73,7 +73,7 @@ if (isset($_SERVER['HTTP_USER_AGENT']) && strlen(strstr($_SERVER['HTTP_USER_AGEN
 $editorattrs = [
     'use-shadow-dom' => "false",
     'language' => current_language(),
-    'is-production-environment' => "true", // TODO should be true in Moodle Plugin Directory, false otherwise.
+    'is-production-environment' => "true", // Should be true in Moodle Plugin Directory, false otherwise.
     'editor-variant' => "moodle",
 ];
 
