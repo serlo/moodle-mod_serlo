@@ -270,6 +270,23 @@ function serlo_get_content_types() {
             "plugin":"blanksExercise","state":{"text":{"plugin":"text",
             "state":[{"type":"p","children":[{"text":""}]}]},"mode":"typing"}}}}]}',
         ],
+        'dropzoneImage' => [
+            'image' => 'dropzoneImage',
+            'title' => get_string('dropzoneImage', 'mod_serlo'),
+            'initalContent' => '{"plugin":"exercise","state":{"content":{"plugin":"rows",
+            "state":[{"plugin":"text"}]},"interactive":{"plugin":"dropzoneImage"}}}',
+        ],
+        'imageGallery' => [
+            'image' => 'imageGallery',
+            'title' => get_string('imageGallery', 'mod_serlo'),
+            'initalContent' => '{"plugin":"imageGallery"}',
+        ],
+        'textAreaExercise' => [
+            'image' => 'textAreaExercise',
+            'title' => get_string('textAreaExercise', 'mod_serlo'),
+            'initalContent' => '{"plugin":"exercise","state":{"content":{"plugin":"rows",
+            "state":[{"plugin":"text"}]},"interactive":{"plugin":"textAreaExercise"}}}',
+        ],
     ];
 }
 
