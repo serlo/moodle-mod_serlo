@@ -44,14 +44,12 @@ final class serlo_test extends \advanced_testcase {
             'spoiler',
             'box',
             'serloTable',
-            'injection',
             'equations',
             'geogebra',
             'highlight',
             'video',
             'scMcExercise',
             'inputExercise',
-            'h5p',
             'blanksExercise',
         ]));
     }

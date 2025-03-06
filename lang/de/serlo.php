@@ -39,12 +39,10 @@ $string['firefox_warning'] = 'Im Moment gibt es einige Probleme mit Firefox. ' .
 
 $string['geogebra'] = 'GeoGebra Applet';
 
-$string['h5p'] = 'Aufgabe H5P';
 $string['highlight'] = 'Code';
 
 $string['image'] = 'Bild';
 $string['initialstate'] = 'Initialer Inhalt';
-$string['injection'] = 'serlo.org Inhalt';
 $string['inputExercise'] = 'Aufgabe Eingabefeld';
 $string['intro'] = 'Einleitung';
 $string['invalidserloid'] = 'Invalid serlo ID';
