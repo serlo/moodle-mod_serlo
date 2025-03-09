@@ -270,6 +270,26 @@ function serlo_get_content_types() {
             "plugin":"blanksExercise","state":{"text":{"plugin":"text",
             "state":[{"type":"p","children":[{"text":""}]}]},"mode":"typing"}}}}]}',
         ],
+        'dropzoneImage' => [
+            'image' => 'dropzoneImage',
+            'title' => get_string('dropzoneImage', 'mod_serlo'),
+            'initalContent' => '{"plugin":"rows","state":[{"plugin":"exercise","state":{"content":{"plugin":
+            "rows","state":[{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}]},"interactive":
+            {"plugin":"dropzoneImage","state":{"answerZones":[],"canvasShape":"","canvasDimensions":
+            {"height":600,"width":600},"backgroundType":"","dropzoneVisibility":"full","extraDraggableAnswers":[]}}}}]}',
+        ],
+        'imageGallery' => [
+            'image' => 'imageGallery',
+            'title' => get_string('imageGallery', 'mod_serlo'),
+            'initalContent' => '{"plugin":"rows","state":[{"plugin":"imageGallery","state":{"images":[]}}]}',
+        ],
+        'textAreaExercise' => [
+            'image' => 'textAreaExercise',
+            'title' => get_string('textAreaExercise', 'mod_serlo'),
+            'initalContent' => '{"plugin":"rows","state":[{"plugin":"exercise","state":{"content":{"plugin":
+            "rows","state":[{"plugin":"text","state":[{"type":"p","children":[{"text":""}]}]}]},
+            "interactive":{"plugin":"textAreaExercise","state":{}}}}]}',
+        ],
     ];
 }
 

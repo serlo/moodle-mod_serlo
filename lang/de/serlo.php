@@ -29,6 +29,7 @@ $string['blanksExercise'] = 'Aufgabe Lückentext';
 $string['box'] = 'Box';
 
 $string['crontask'] = 'Serlo Cron Task';
+$string['dropzoneImage'] = 'Interaktives Bild';
 
 $string['empty'] = 'Editor';
 $string['equations'] = 'Terme und Gleichungen';
@@ -42,6 +43,8 @@ $string['geogebra'] = 'GeoGebra Applet';
 $string['highlight'] = 'Code';
 
 $string['image'] = 'Bild';
+$string['imageGallery'] = 'Bilder Galerie';
+
 $string['initialstate'] = 'Initialer Inhalt';
 $string['inputExercise'] = 'Aufgabe Eingabefeld';
 $string['intro'] = 'Einleitung';
@@ -66,6 +69,8 @@ $string['setting_editor_secret_label'] = 'Serlo editor secret';
 $string['settings_placeholder'] = 'Platzhalter für Serlo Einstellungen';
 
 $string['spoiler'] = 'Spolier';
+
 $string['text'] = 'Text';
+$string['textAreaExercise'] = 'Freitext';
 
 $string['video'] = 'Video';
