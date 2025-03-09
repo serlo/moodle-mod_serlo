@@ -34,9 +34,6 @@ $string['dropzoneImage'] = 'Interactive image';
 $string['empty'] = 'Editor';
 $string['equations'] = 'Equations';
 
-$string['firefox_warning'] = 'There are some problems with Firefox at the moment. ' .
-    'Please use a Chromium based browser like Chrome, Brave or Opera for a better experience.';
-
 $string['geogebra'] = 'GeoGebra Applet';
 
 $string['highlight'] = 'Code';

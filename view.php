@@ -66,10 +66,6 @@ $modes = [
     false => "read",
 ];
 
-if (isset($_SERVER['HTTP_USER_AGENT']) && strlen(strstr($_SERVER['HTTP_USER_AGENT'], 'Firefox')) > 0) {
-    \core\notification::warning(get_string('firefox_warning', 'mod_serlo'));
-}
-
 $editorattrs = [
     'use-shadow-dom' => "false",
     'language' => current_language(),
