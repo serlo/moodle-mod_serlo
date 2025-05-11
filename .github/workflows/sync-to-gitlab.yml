@@ -14,5 +14,5 @@ jobs:
         uses: kulla/sync-to-gitlab@v1
         with:
           owner: stephan_kulla
-          repository_name: serlo-evaluations
+          repository_name: serlo-moodle-mod
           token: ${{ secrets.GITLAB_TOKEN }}
